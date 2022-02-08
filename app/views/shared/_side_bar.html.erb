@@ -1,0 +1,9 @@
+<div class="side-bar-header">
+  <div class="header-name">
+    <%= link_to current_user.name, root_path%>
+    <%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: 'btn'%>
+  </div>
+  <div class="create-room">
+    <a href="#">出来事を記録する</a>
+  </div>
+</div>
