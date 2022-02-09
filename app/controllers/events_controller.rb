@@ -1,10 +1,16 @@
 class EventsController < ApplicationController
   def index
+    @events = Event.all
+    @event = Event.new
+  end
+
+  def new
     @event = Event.new
   end
 
   def create
-    if @message.save
+    @event = Event.new(event_params)
+    if @event.save
       redirect_to events_path
     else
       render :new
@@ -13,8 +19,8 @@ class EventsController < ApplicationController
 
   private
 
-  def message_params
-    params.require(:message).permit(:title, :text, :happy_level_id, :public_id, :day).merge(user_id: current_user.id)
+  def event_params
+    params.require(:event).permit(:title, :text, :happy_level_id, :public_id, :day).merge(user_id: current_user.id)
   end
 
 end
