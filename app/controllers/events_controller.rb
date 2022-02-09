@@ -5,10 +5,12 @@ class EventsController < ApplicationController
   end
 
   def new
+    @events = Event.all
     @event = Event.new
   end
 
   def create
+    @events = Event.all
     @event = Event.new(event_params)
     if @event.save
       redirect_to events_path
