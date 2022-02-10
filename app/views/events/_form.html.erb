@@ -1,0 +1,38 @@
+<div class="event-form">
+<%= form_with(model: @event, local: true) do |f| %>
+
+  <%= render 'shared/error_messages', model: f.object %>
+
+  <div class="title">
+    <div class="form-tag">タイトル</div>
+    <%= f.text_field :title %>
+  </div>
+
+  <div class="text">
+    <div class="form-tag">内容</div>
+    <%= f.text_field :text, rows:"10" %>
+  </div>
+
+    <div class="time">
+    <div class="form-tag">日にち</div>
+    <%= f.date_select :day %>
+  </div>
+
+   <div class="happy_level">
+    <div class="form-tag">レベル</div>
+   <%= f.collection_select(:happy_level_id, HappyLevel.all, :id, :name, {}, {class:"genre-select"}) %>
+
+  </div>
+
+   <div class="public">
+    <div class="form-tag">公開/非公開</div>
+    <%= f.collection_select(:public_id, Public.all, :id, :name, {}, {class:"genre-select"}) %>
+
+  </div>
+
+ <div class="submit">
+    <%= f.submit "投稿する" %>
+    <%=link_to 'もどる', root_path, class:"back-btn" %>
+ </div>
+<% end %>
+</div>

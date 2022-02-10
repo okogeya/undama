@@ -4,6 +4,6 @@
     <%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: 'btn'%>
   </div>
   <div class="create-room">
-    <a href="#">出来事を記録する</a>
+    <%= link_to "出来事を記録する", new_event_path %>
   </div>
 </div>
