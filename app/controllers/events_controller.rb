@@ -1,16 +1,15 @@
 class EventsController < ApplicationController
+  before_action :list_events
+  before_action :new_events, only: [:index, :new]
+  before_action :set_events, only: [:show, :edit, :update, :destroy]
+
   def index
-    @events = Event.all
-    @event = Event.new
   end
 
   def new
-    @events = Event.all
-    @event = Event.new
   end
 
   def create
-    @events = Event.all
     @event = Event.new(event_params)
     if @event.save
       redirect_to events_path
@@ -20,29 +19,39 @@ class EventsController < ApplicationController
   end
 
   def show
-    @events = Event.all
-    @event = Event.find(params[:id])
   end
 
   def edit
-    @events = Event.all
-    @event = Event.find(params[:id])
   end
 
   def update
-    @events = Event.all
-    @event = Event.find(params[:id])
     if @event.update(event_params)
-      redirect_to event_path(event.id)
+      redirect_to event_path(@event.id)
     else
       render :edit
     end
+  end
+
+  def destroy
+    @event.destroy
   end
 
   private
 
   def event_params
     params.require(:event).permit(:title, :text, :happy_level_id, :public_id, :day).merge(user_id: current_user.id)
+  end
+
+  def list_events
+    @events = Event.all
+  end
+
+  def new_events
+    @event = Event.new
+  end
+
+  def set_events
+    @event = Event.find(params[:id])
   end
 
 end
