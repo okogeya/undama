@@ -21,6 +21,7 @@
       <strong>公開/非公開</strong>
       <%= @event.public.name %>
     </p>
+    <%= link_to '編集する', edit_event_path(@event.id) %>
     <%= link_to '戻る', events_path %>
     </div>
   </div>
