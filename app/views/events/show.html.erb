@@ -1,0 +1,31 @@
+<div class="wrapper">
+  <div class="side-bar">
+    <div class="show">
+    <p>
+      <strong>日にち</strong>
+      <%= @event.day %>
+    </p>
+    <p>
+      <strong>タイトル</strong>
+      <%= @event.title %>
+    </p>
+    <p>
+      <strong>内容</strong>
+      <%= @event.text %>
+    </p>
+    <p>
+      <strong>レベル</strong>
+      <%= @event.happy_level.name %>
+    </p>
+    <p>
+      <strong>公開/非公開</strong>
+      <%= @event.public.name %>
+    </p>
+    <%= link_to '戻る', events_path %>
+    </div>
+  </div>
+
+  <div class="calendar">
+    <%= render "calendar" %>
+  </div>
+</div>
