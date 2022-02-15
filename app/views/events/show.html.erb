@@ -21,6 +21,11 @@
       <strong>公開/非公開</strong>
       <%= @event.public.name %>
     </p>
+    <p>
+      <strong>投稿者</strong>
+      <%= @event.user.name %>
+    </p>
+
     <%= link_to '編集する', edit_event_path(@event.id) %>
     <%= link_to '削除する', event_path(@event.id), method: :delete, data: {confirm: "削除してよろしいですか？"}  %>
     <%= link_to '戻る', events_path %>
