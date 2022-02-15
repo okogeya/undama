@@ -1,0 +1,10 @@
+ja:
+  activerecord:
+    attributes:
+      user:
+        name: 名前
+      event:
+        title: タイトル
+        text: 内容
+        happy_level_id: 幸せレベル
+        public_id: 公開/非公開
