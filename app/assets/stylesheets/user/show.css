@@ -1,0 +1,177 @@
+.wrapper {
+  display: flex;
+}
+
+.side-bar {
+  width: 300px;
+  height: 100vh;
+}
+
+.calendar {
+  width: calc(100vw - 300px);
+  height: 100vh;
+}
+
+.mypage {
+  text-align: center;
+}
+
+.eventlist{
+  width: 270px;
+  height: 250px;
+  border: 1px solid gray;
+  border-radius: 10px;
+  margin: 10px;
+  text-align: center;
+  overflow: scroll;
+}
+
+.undama1 {
+  height:  10px;                         /* 高さ指定 */
+  width:  10px;                          /* 幅指定 */
+  border-radius:  50%;                    /* 角丸指定 */
+  background: linear-gradient(-90deg, lightcyan, lavender);  /* グラデーション指定 */
+  animation: anime 7s linear infinite;    /* アニメーション指定 */
+  position: relative;                     /* 位置指定 */
+  box-shadow:
+    0 0 5px lightcyan,
+    -5px 0 40px lightblue,
+    5px 0 30px lavender;
+  display: block;
+    margin-left: auto;
+    margin-right: auto
+}
+
+@keyframes anime {
+  0% {
+      transform: rotate(0deg);    /* 角度指定 */
+  }
+  100% {
+      transform: rotate(360deg);  /* 角度指定 */
+  }
+}
+
+.undama2 {
+  height:  30px;                         /* 高さ指定 */
+  width:  30px;                          /* 幅指定 */
+  border-radius:  50%;                    /* 角丸指定 */
+  background: linear-gradient(-90deg, lightcyan, lavender);  /* グラデーション指定 */
+  animation: anime 20s linear infinite;    /* アニメーション指定 */
+  position: relative;                     /* 位置指定 */
+  box-shadow:
+    0 0 5px lightcyan,
+    -5px 0 40px lightblue,
+    5px 0 30px lavender;
+  display: block;
+    margin-left: auto;
+    margin-right: auto
+}
+
+@keyframes anime {
+  0% {
+      transform: rotate(0deg);    /* 角度指定 */
+  }
+  100% {
+      transform: rotate(360deg);  /* 角度指定 */
+  }
+}
+
+.undama3 {
+  height:  50px;                         /* 高さ指定 */
+  width:  50px;                          /* 幅指定 */
+  border-radius:  50%;                    /* 角丸指定 */
+  background: linear-gradient(-90deg, lightcyan, lavender);  /* グラデーション指定 */
+  animation: anime 20s linear infinite;    /* アニメーション指定 */
+  position: relative;                     /* 位置指定 */
+  box-shadow:
+    0 0 5px lightcyan,
+    -5px 0 40px lightblue,
+    5px 0 30px lavender;
+  display: block;
+    margin-left: auto;
+    margin-right: auto
+}
+
+@keyframes anime {
+  0% {
+      transform: rotate(0deg);    /* 角度指定 */
+  }
+  100% {
+      transform: rotate(360deg);  /* 角度指定 */
+  }
+}
+
+.undama4 {
+  height:  80px;                         /* 高さ指定 */
+  width:  80px;                          /* 幅指定 */
+  border-radius:  50%;                    /* 角丸指定 */
+  background: linear-gradient(-90deg, lightcyan, lavender);  /* グラデーション指定 */
+  animation: anime 20s linear infinite;    /* アニメーション指定 */
+  position: relative;                     /* 位置指定 */
+  box-shadow:
+    0 0 5px lightcyan,
+    -5px 0 40px lightblue,
+    5px 0 30px lavender;
+  display: block;
+    margin-left: auto;
+    margin-right: auto
+}
+
+@keyframes anime {
+  0% {
+      transform: rotate(0deg);    /* 角度指定 */
+  }
+  100% {
+      transform: rotate(360deg);  /* 角度指定 */
+  }
+}
+
+.undama5 {
+  height:  100px;                         /* 高さ指定 */
+  width:  100px;                          /* 幅指定 */
+  border-radius:  50%;                    /* 角丸指定 */
+  background: linear-gradient(-90deg, lightcyan, lavender);  /* グラデーション指定 */
+  animation: anime 20s linear infinite;    /* アニメーション指定 */
+  position: relative;                     /* 位置指定 */
+  box-shadow:
+    0 0 5px lightcyan,
+    -5px 0 40px lightblue,
+    5px 0 30px lavender;
+  display: block;
+    margin-left: auto;
+    margin-right: auto
+}
+
+@keyframes anime {
+  0% {
+      transform: rotate(0deg);    /* 角度指定 */
+  }
+  100% {
+      transform: rotate(360deg);  /* 角度指定 */
+  }
+}
+
+.undama6 {
+  height:  200px;                         /* 高さ指定 */
+  width:  200px;                          /* 幅指定 */
+  border-radius:  50%;                    /* 角丸指定 */
+  background: linear-gradient(-90deg, lightcyan, lavender);  /* グラデーション指定 */
+  animation: anime 20s linear infinite;    /* アニメーション指定 */
+  position: relative;                     /* 位置指定 */
+  box-shadow:
+    0 0 5px lightcyan,
+    -5px 0 40px lightblue,
+    5px 0 30px lavender;
+  display: block;
+    margin-left: auto;
+    margin-right: auto
+}
+
+@keyframes anime {
+  0% {
+      transform: rotate(0deg);    /* 角度指定 */
+  }
+  100% {
+      transform: rotate(360deg);  /* 角度指定 */
+  }
+}

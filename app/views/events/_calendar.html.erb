@@ -3,9 +3,11 @@
   <%= date.day %>
 
   <% events.each do |event| %>
+  <% if event.public.name == "公開" || ( user_signed_in? && current_user.id == event.user_id) %>
     <div>
       <%= link_to event.title, event_path(event.id) %>
     </div>
+  <% end %>
   <% end %>
 <% end %>
 </div>
