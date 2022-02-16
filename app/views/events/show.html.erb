@@ -26,8 +26,10 @@
       <%= @event.user.name %>
     </p>
 
+    <% if user_signed_in? %>
     <%= link_to '編集する', edit_event_path(@event.id) %>
     <%= link_to '削除する', event_path(@event.id), method: :delete, data: {confirm: "削除してよろしいですか？"}  %>
+    <% end %>  
     <%= link_to '戻る', events_path %>
     </div>
   </div>
