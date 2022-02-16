@@ -24,5 +24,14 @@
 .has-events {}
 
 table {
-  height: calc(100vh - 42px);
+  height: calc(100vh - 60px);
 } 
+
+.calendar-heading{
+  display: flex;
+}
+
+.search-form{
+  margin: 0px 0px 3px 20px;
+  align-items: center;
+}

@@ -1,0 +1,24 @@
+<div class="wrapper">
+  <div class="side-bar">
+    <div class="search">
+    <h1>検索結果</h1>
+      <div class="search-list">
+      <p><%= @events.size %>件見つかりました</p>
+      <% @events.each do |event| %>
+      <%= event.day %>　<%= link_to event.title, event_path(event.id) %><br>
+      <% end %>
+      <% if @events.size == 0 %>
+        <p>検索結果がありません</p>
+      <% end %>
+      </div>
+    <% if user_signed_in? %>
+    <%= link_to "マイページに戻る", "/users/#{current_user.id}" %><br>
+    <% end %>
+    <%=link_to 'トップページに戻る', root_path, class:"back-btn" %>
+    </div>
+  </div>
+
+  <div class="calendar">
+    <%= render "calendar" %>
+  </div>
+</div>

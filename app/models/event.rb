@@ -14,4 +14,12 @@ class Event < ApplicationRecord
   def start_time
     self.day #self.の後はsimple_calendarに表示させるためのカラムを指定
   end
+
+  def self.search(search)
+    if search != ""
+      Event.where('text LIKE(?)', "%#{search}%")
+    else
+      Event.all
+    end
+  end
 end
