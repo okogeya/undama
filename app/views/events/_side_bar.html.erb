@@ -5,11 +5,11 @@
  <p>アカウント登録やログインをしなくても、公開設定になっている投稿は見ることができます。</p>
   <div class="header-name">
     <% if user_signed_in? %>
-    <%= link_to current_user.name, root_path%>
+    <%= link_to "#{current_user.name}さんのマイページ", "/users/#{current_user.id}" %><br>
+    <%= link_to "出来事を記録する", new_event_path %><br>
     <%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: 'btn'%>
-    <%= link_to "出来事を記録する", new_event_path %>
     <% else %>
-    <%= link_to "ログイン", new_user_session_path, class: 'btn'%>
+    <%= link_to "ログイン", new_user_session_path, class: 'btn'%><br>
     <%= link_to '新規登録', new_user_registration_path, class: "btn" %>
     <% end %>   
   </div>

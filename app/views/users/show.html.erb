@@ -1,0 +1,55 @@
+<div class="wrapper">
+  <div class="side-bar">
+    <div class="mypage">
+    <h1><%= @name %>さんの<br>
+    マイページ</h1>
+    <div class="undamashow">
+      <% if @total >= 0 && @total < 10 %>
+      <div class="undama1"></div>
+      <% elsif @total >= 10 && @total < 50 %>
+      <div class="undama2"></div>
+       <% elsif @total >= 50 && @total < 80 %>
+      <div class="undama3"></div>
+       <% elsif @total >= 80 && @total < 100 %>
+      <div class="undama4"></div>
+       <% elsif @total >= 100 && @total < 1000 %>
+      <div class="undama5"></div>
+       <% elsif @total >= 1000 %>
+      <div class="undama6"></div>
+      <% end %>
+    </div>
+    <p>
+      <strong>あなたの運玉ポイント</strong>
+      <%= @total %>
+    </p>
+    <p>
+      <strong>あなたの投稿総数</strong>
+       <%= @events.count %>件
+       <% if @events.count == 0 %>
+       まだ投稿はありません。投稿してみましょう！
+       <% end %>
+    </p>
+    <p>
+      <strong>あなたの投稿一覧</strong><br>
+      <a>件数が多い場合、<br>
+      枠内をスクロールできます。</a>
+        <div class="eventlist">
+        <% @events.each do |event| %>
+        <p><%= event.day %>　<%= link_to event.title, event_path(event.id) %></p>
+        <% if @events.count == 0 %>
+       まだ投稿はありません。投稿してみましょう！
+        <% end %>
+        <% end %>
+        </div>
+    </p>
+
+    <%= link_to 'トップページに戻る', events_path %><br>
+    <%= link_to "出来事を記録する", new_event_path %> <br> 
+    <%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: 'btn'%><br>
+    </div>
+  </div>
+
+  <div class="calendar">
+    <%= render "events/calendar" %>
+  </div>
+</div>

@@ -27,10 +27,10 @@
     </p>
 
     <% if user_signed_in? && current_user.id == @event.user_id %>
-    <%= link_to '編集する', edit_event_path(@event.id) %>
-    <%= link_to '削除する', event_path(@event.id), method: :delete, data: {confirm: "削除してよろしいですか？"}  %>
+    <%= link_to '編集する', edit_event_path(@event.id) %><br>
+    <%= link_to '削除する', event_path(@event.id), method: :delete, data: {confirm: "削除してよろしいですか？"}  %><br>
     <% end %>  
-    <%= link_to '戻る', events_path %>
+    <%= link_to '戻る', 'javascript:history.back()' %>
     </div>
   </div>
 
