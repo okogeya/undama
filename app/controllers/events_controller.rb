@@ -20,9 +20,17 @@ class EventsController < ApplicationController
   end
 
   def show
+    if @event.public.name == "公開"
+      @event = Event.find(params[:id])
+    elsif @event.public.name == "非公開" && user_signed_in? && current_user.id == @event.user_id
+      @event = Event.find(params[:id])
+    else
+      redirect_to root_path
+    end
   end
 
   def edit
+    redirect_to root_path unless current_user.id == @event.user_id
   end
 
   def update
@@ -35,6 +43,7 @@ class EventsController < ApplicationController
 
   def destroy
     @event.destroy
+    redirect_to root_path
   end
 
   private
