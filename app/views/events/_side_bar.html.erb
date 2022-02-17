@@ -4,7 +4,7 @@
  <p>このアプリは、その日あった良い出来事を記録するための日記アプリです。良い出来事をどんどん貯めていくことで、幸運の種「運玉」をどんどん大きく成長させることができます。</p>
  <p>運玉の様子はマイページで見ることができます。出来事の投稿、運玉の育成にはアカウント登録が必要です。</p>
  <p>アカウント登録やログインをしなくても、公開設定になっている投稿は見ることができます。</p>
-  <div class="header-btn">
+  <div class="btns">
     <% if user_signed_in? %>
     <%= link_to "#{current_user.name}さんのマイページ", "/users/#{current_user.id}", class: 'btn' %><br>
     <%= link_to "出来事を記録する", new_event_path, class: 'btn' %><br>

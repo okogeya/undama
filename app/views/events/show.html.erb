@@ -26,11 +26,13 @@
       <%= @event.user.name %>
     </p>
 
+    <div class="btns">
     <% if user_signed_in? && current_user.id == @event.user_id %>
     <%= link_to '編集する', edit_event_path(@event.id), class: "btn" %><br>
     <%= link_to '削除する', event_path(@event.id), method: :delete, data: {confirm: "削除してよろしいですか？"}, class: "btn" %><br>
     <% end %>  
     <%= link_to '戻る', 'javascript:history.back()', class: "btn" %>
+    </div>
     </div>
   </div>
 
