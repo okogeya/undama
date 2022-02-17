@@ -2,7 +2,21 @@
   text-align: center;
 }
 
-.submit{
+.form-tag{
+  margin: 10px 0px 2px 0px;
+}
+
+.title-text-field{
+  width: 250px;
+}
+
+.text-text-area{
+  resize: none;
+  width: 250px;
+  height: 250px;
+}
+
+.btns{
   text-align: center;
   margin: 30px 0px 0px 0px;
 }
