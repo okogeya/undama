@@ -1,16 +1,17 @@
 <div class="event-form">
+<h2>出来事を記録する</h2>
 <%= form_with(model: @event, local: true) do |f| %>
 
   <%= render 'shared/error_messages', model: f.object %>
 
   <div class="title">
     <div class="form-tag">タイトル</div>
-    <%= f.text_field :title %>
+    <%= f.text_field :title, class: "title-text-field" %>
   </div>
 
   <div class="text">
     <div class="form-tag">内容</div>
-    <%= f.text_area :text, rows:"20" %>
+    <%= f.text_area :text, class: "text-text-area" %>
   </div>
 
     <div class="time">
@@ -21,7 +22,6 @@
    <div class="happy_level">
     <div class="form-tag">レベル</div>
    <%= f.collection_select(:happy_level_id, HappyLevel.all, :id, :name, {}, {class:"genre-select"}) %>
-
   </div>
 
    <div class="public">
@@ -30,9 +30,9 @@
 
   </div>
 
- <div class="submit">
-    <%= f.submit "投稿する" %><br>
-    <%=link_to 'もどる', 'javascript:history.back()', class:"back-btn" %>
+ <div class="btns">
+    <%= f.submit "投稿する", class: "btn" %><br>
+    <%=link_to 'もどる', 'javascript:history.back()', class: "btn" %>
  </div>
 <% end %>
 </div>

@@ -16,3 +16,22 @@
   width: 300px;
   height: 100vh;
 }
+
+.btn {
+  padding: 4px 10px;
+  margin: 4px;
+  font-size: 16px;
+  border: 2px solid #57C3E9;
+  color: #57C3E9;
+  background-color: white;
+  font-weight: bold;
+  text-align: center;
+  border-radius: 5px;
+  display: inline-block;
+  text-decoration: none;
+}
+
+.btns {  //サイドバーのボタン群
+  text-align: center;
+  margin: 30px 0px 0px 0px;
+}

@@ -35,7 +35,10 @@
       枠内をスクロールできます。</a>
         <div class="eventlist">
         <% @events.each do |event| %>
-        <p><%= event.day %>　<%= link_to event.title, event_path(event.id) %></p>
+        <ul>
+        <li class="search-date"><%= event.day %></li>
+        <li class="search-title"><%= link_to event.title, event_path(event.id) %></li>
+        </ul>
         <% if @events.count == 0 %>
        まだ投稿はありません。投稿してみましょう！
         <% end %>
@@ -43,8 +46,8 @@
         </div>
     </p>
 
-    <%= link_to 'トップページに戻る', events_path %><br>
-    <%= link_to "出来事を記録する", new_event_path %> <br> 
+    <%= link_to 'トップページに戻る', events_path, class: "btn" %><br>
+    <%= link_to "出来事を記録する", new_event_path, class: "btn" %> <br> 
     <%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: 'btn'%><br>
     </div>
   </div>

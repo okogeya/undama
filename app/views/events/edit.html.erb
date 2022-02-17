@@ -1,18 +1,19 @@
 <div class="wrapper">
   <div class="side-bar">
     <div class="event-form">
+    <h2>投稿内容を編集する</h2>
      <%= form_with(model: @event, local: true) do |f| %>
 
      <%= render 'shared/error_messages', model: f.object %>
 
      <div class="title">
        <div class="form-tag">タイトル</div>
-       <%= f.text_field :title %>
+       <%= f.text_field :title, class: "title-text-field" %>
      </div>
 
      <div class="text">
        <div class="form-tag">内容</div>
-       <%= f.text_field :text, rows:"10" %>
+       <%= f.text_area :text, class: "text-text-area" %>
      </div>
 
      <div class="time">
@@ -30,9 +31,9 @@
        <%= f.collection_select(:public_id, Public.all, :id, :name, {}, {class:"genre-select"}) %>
      </div>
 
-     <div class="submit">
-      <%= f.submit "編集する" %><br>
-      <%=link_to 'やめる（トップページに戻る）', root_path, class:"back-btn" %>
+     <div class="btns">
+      <%= f.submit "編集する", class: "btn" %><br>
+      <%=link_to 'やめる（トップページに戻る）', root_path, class: "btn" %>
      </div>
     <% end %>
     </div>

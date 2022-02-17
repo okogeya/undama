@@ -4,7 +4,8 @@
 
 .side-bar {
   width: 300px;
-  height: 100vh;
+  height: calc(100vh - 30px);
+  overflow: scroll;
 }
 
 .calendar {
@@ -106,7 +107,7 @@
   width:  80px;                          /* 幅指定 */
   border-radius:  50%;                    /* 角丸指定 */
   background: linear-gradient(-90deg, lightcyan, lavender);  /* グラデーション指定 */
-  animation: anime 20s linear infinite;    /* アニメーション指定 */
+  animation: anime 15s linear infinite;    /* アニメーション指定 */
   position: relative;                     /* 位置指定 */
   box-shadow:
     0 0 5px lightcyan,
@@ -131,7 +132,7 @@
   width:  100px;                          /* 幅指定 */
   border-radius:  50%;                    /* 角丸指定 */
   background: linear-gradient(-90deg, lightcyan, lavender);  /* グラデーション指定 */
-  animation: anime 20s linear infinite;    /* アニメーション指定 */
+  animation: anime 10s linear infinite;    /* アニメーション指定 */
   position: relative;                     /* 位置指定 */
   box-shadow:
     0 0 5px lightcyan,
@@ -156,7 +157,7 @@
   width:  200px;                          /* 幅指定 */
   border-radius:  50%;                    /* 角丸指定 */
   background: linear-gradient(-90deg, lightcyan, lavender);  /* グラデーション指定 */
-  animation: anime 20s linear infinite;    /* アニメーション指定 */
+  animation: anime 8s linear infinite;    /* アニメーション指定 */
   position: relative;                     /* 位置指定 */
   box-shadow:
     0 0 5px lightcyan,

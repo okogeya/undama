@@ -3,9 +3,22 @@
 }
 
 .search-list{
-  width: 270px;
+  width: 275px;
   margin: 10px;
   text-align: center;
   overflow: scroll;
+}
 
+ul {
+  list-style-type: none;
+  padding: 0px 0px 0px 5px;
+}
+
+.search-date {
+  text-align: left;
+}
+
+.search-title{
+  text-align: left;
+  margin: 0px 0px 0px 20px; 
 }
