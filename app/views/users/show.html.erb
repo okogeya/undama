@@ -35,7 +35,10 @@
       枠内をスクロールできます。</a>
         <div class="eventlist">
         <% @events.each do |event| %>
-        <p><%= event.day %>　<%= link_to event.title, event_path(event.id) %></p>
+        <ul>
+        <li class="search-date"><%= event.day %></li>
+        <li class="search-title"><%= link_to event.title, event_path(event.id) %></li>
+        </ul>
         <% if @events.count == 0 %>
        まだ投稿はありません。投稿してみましょう！
         <% end %>

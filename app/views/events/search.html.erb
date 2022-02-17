@@ -5,7 +5,10 @@
       <div class="search-list">
       <p><%= @events.size %>件見つかりました</p>
       <% @events.each do |event| %>
-      <%= event.day %>　<%= link_to event.title, event_path(event.id) %><br>
+      <ul>
+        <li class="search-date"><%= event.day %></li>
+        <li class="search-title"><%= link_to event.title, event_path(event.id) %></li>
+      </ul>
       <% end %>
       <% if @events.size == 0 %>
         <p>検索結果がありません</p>
