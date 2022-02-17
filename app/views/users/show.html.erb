@@ -43,8 +43,8 @@
         </div>
     </p>
 
-    <%= link_to 'トップページに戻る', events_path %><br>
-    <%= link_to "出来事を記録する", new_event_path %> <br> 
+    <%= link_to 'トップページに戻る', events_path, class: "btn" %><br>
+    <%= link_to "出来事を記録する", new_event_path, class: "btn" %> <br> 
     <%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: 'btn'%><br>
     </div>
   </div>

@@ -12,9 +12,9 @@
       <% end %>
       </div>
     <% if user_signed_in? %>
-    <%= link_to "マイページに戻る", "/users/#{current_user.id}" %><br>
+    <%= link_to "マイページに戻る", "/users/#{current_user.id}", class: "btn" %><br>
     <% end %>
-    <%=link_to 'トップページに戻る', root_path, class:"back-btn" %>
+    <%=link_to 'トップページに戻る', root_path, class:"back-btn", class: "btn" %>
     </div>
   </div>
 
