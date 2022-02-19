@@ -24,28 +24,25 @@
     </p>
     <p>
       <strong>あなたの投稿総数</strong>
-       <%= @events.count %>件
-       <% if @events.count == 0 %>
-       まだ投稿はありません。投稿してみましょう！
-       <% end %>
+      <%= @events.count %>件
     </p>
     <p>
       <strong>あなたの投稿一覧</strong><br>
       <a>件数が多い場合、<br>
       枠内をスクロールできます。</a>
         <div class="eventlist">
+        <% if @events.count == 0 %>
+        <p>まだ投稿はありません。<br>
+        投稿してみましょう！</p>
+        <% end %>
         <% @events.each do |event| %>
         <ul>
         <li class="search-date"><%= event.day %></li>
         <li class="search-title"><%= link_to event.title, event_path(event.id) %></li>
         </ul>
-        <% if @events.count == 0 %>
-       まだ投稿はありません。投稿してみましょう！
-        <% end %>
         <% end %>
         </div>
     </p>
-
     <%= link_to 'トップページに戻る', events_path, class: "btn" %><br>
     <%= link_to "出来事を記録する", new_event_path, class: "btn" %> <br> 
     <%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: 'btn'%><br>
