@@ -8,6 +8,7 @@ ja:
         text: 内容
         happy_level_id: 幸せレベル
         public_id: 公開/非公開
+        day: 日にち
         
   date:
     abbr_day_names:

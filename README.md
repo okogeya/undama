@@ -45,7 +45,7 @@ https://undama.herokuapp.com/
 
 | Column         | Type       | Options                        |
 | -------------- | ---------- | ------------------------------ |
-| title          | string     |                                |
+| title          | string     | null: false                    |
 | text           | text       | null: false                    |
 | happy_level_id | integer    | null: false                    |
 | public_id      | integer    | null: false                    |
