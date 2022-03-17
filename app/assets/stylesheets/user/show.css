@@ -53,9 +53,9 @@
 }
 
 .undama2 {
-  height:  30px;                         /* 高さ指定 */
-  width:  30px;                          /* 幅指定 */
-  border-radius:  50%;                    /* 角丸指定 */
+  height:  30px;                        
+  width:  30px;                         
+  border-radius:  50%;                  
   background: linear-gradient(-90deg, lightcyan, lavender);  /* グラデーション指定 */
   animation: anime 20s linear infinite;    /* アニメーション指定 */
   position: relative;                     /* 位置指定 */
