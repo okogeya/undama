@@ -52,7 +52,7 @@
   }
 }
 
-.undama2 {   /*以下、表記の簡略化をする*/
+.undama2 {
   height:  30px;                         /* 高さ指定 */
   width:  30px;                          /* 幅指定 */
   border-radius:  50%;                    /* 角丸指定 */
