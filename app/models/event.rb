@@ -17,9 +17,9 @@ class Event < ApplicationRecord
 
   def self.search(search)
     if search != ""
-      Event.where('text LIKE(?)', "%#{search}%")
+      Event.where('text LIKE(?)', "%#{search}%").where.not(public_id: 2 )
     else
-      Event.all
+      Event.where.not('text LIKE(?)', "%#{search}%")
     end
   end
 end
