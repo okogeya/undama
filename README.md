@@ -6,15 +6,6 @@
 
 ![運玉のイメージ](undamaimage.png) 
 
-# URL
-https://undama.herokuapp.com/
-
-# テスト用アカウント
-・Basic認証ID：admin<br>
-・Basic認証パスワード：2222<br>
-・メールアドレス：test@test.com<br>
-・パスワード：123abc
-
 # 利用方法
 ## 出来事の投稿
 1.トップページのサイドバーからユーザー登録を行います<br>
